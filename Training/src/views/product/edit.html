@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+</head>
+<body>
+    <h3>Edit Product</h3>
+    <form method="POST" action="/product/update">
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>{{.product.Id}}</td>
+        </tr>
+        <tr>
+            <td>Nama</td>
+            <td><input type="text" name="nama" value="{{.product.Nama}}"></td>
+        </tr>
+        <tr>
+            <td>Harga</td>
+            <td><input type="text" name="harga" value="{{.product.Harga}}"></td>
+        </tr>
+        <tr>
+            <td>Jumlah</td>
+            <td><input type="number" name="jumlah" min="0"  value="{{.product.Jumlah}}"></td>
+        </tr>
+         <tr>
+            <td valign ="top">Deskripsi</td>
+            <td>
+                <textarea name="deskripsi" cols="20" rows="5">{{.product.Deskripsi}}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <input type="submit" value="Save">
+                <input type="hidden" name="id" value="{{.Id}}">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

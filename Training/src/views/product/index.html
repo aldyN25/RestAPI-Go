@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+
+    <h3>Product List</h3>
+    <a href=/"product/add">Add</a>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Nama</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Deskripsi</th>
+            <th>Action</th>
+        </tr>
+        {{range .products}}
+        <tr>
+            
+            <td>{{.Id}}</td>
+            <td>{{.Nama}}</td>
+            <td>{{.Harga}}</td>
+            <td>{{.Jumlah}}</td>
+            <td>{{.Deskripsi}}</td>
+            <td>
+                <a href="/product/edit?id={{.Id}}">Delete</a> | 
+                <a href="/product/delete?id={{.Id}}" onclick="return confirm('Anda yakin?')">Delete</a>
+            </td>
+        </tr>
+        {{end}}
+    </table>
+    
+</body>
+</html>
