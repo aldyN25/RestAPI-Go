@@ -13,7 +13,7 @@ import (
 // }
 
 type CreatePersonInput struct {
-	ID        uint64 `json:"id"`
+	ID        int64  `json:"id"`
 	Username  string `json:"username"`
 	FirstName string `json:"first_name"`
 	LastName  string `json:"last_name"`
@@ -47,8 +47,6 @@ func Findpersons(c *gin.Context) {
 	}
 	var persons []entitas.Person
 	db.Find(&persons)
-	// tmp, _ := template.ParseFiles("views/product/index.html")
-	// tmp.Execute(response, db)
 
 	c.JSON(http.StatusOK, gin.H{"data": persons})
 	c.HTML(http.StatusOK, "views/person/index.html", gin.H{
