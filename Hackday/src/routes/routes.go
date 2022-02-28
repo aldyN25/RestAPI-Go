@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"rest-api-crud-gin/src/models"
+	"hackday/src/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"

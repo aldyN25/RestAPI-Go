@@ -1,6 +1,8 @@
-module IP-Preparation-FirstWeek-Hackday
+module hackday
 
 go 1.17
+
+require github.com/jinzhu/gorm v1.9.16
 
 require (
 	github.com/gin-contrib/sse v0.1.0 // indirect
@@ -10,7 +12,6 @@ require (
 	github.com/go-playground/validator/v10 v10.10.0 // indirect
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
-	github.com/jinzhu/gorm v1.9.16 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
