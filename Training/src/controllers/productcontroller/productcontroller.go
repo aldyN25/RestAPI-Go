@@ -64,7 +64,10 @@ func Update(response http.ResponseWriter, request *http.Request) {
 	request.ParseForm()
 	var product entitas.Product
 	query := request.URL.Query()
-	product.Id, _ = strconv.ParseInt(query.Get("id"), 10, 64)
+	fmt.Println("id update", query.Get("id"))
+	fmt.Println("id update", request.Form.Get("id"))
+
+	product.Id, _ = strconv.ParseInt(request.Form.Get("id"), 10, 64)
 	product.Nama = request.Form.Get("nama")
 	product.Harga, _ = strconv.ParseFloat(request.Form.Get("harga"), 64)
 	product.Jumlah, _ = strconv.ParseInt(request.Form.Get("jumlah"), 10, 64)

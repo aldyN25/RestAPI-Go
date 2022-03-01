@@ -8,7 +8,7 @@
 </head>
 <body>
     <h3>Edit Product</h3>
-    <form method="post" action="/product/update">
+    <form method="POST" action="/product/update">
     <table>
         <tr>
             <td>Id</td>
@@ -36,7 +36,7 @@
             <td>&nbsp;</td>
             <td>
                 <input type="submit" value="Save">
-                <input type="hidden" name="id" value="{{.Id}}">
+                <input type="hidden" name="id" value="{{.product.Id}}">
             </td>
         </tr>
     </table>
