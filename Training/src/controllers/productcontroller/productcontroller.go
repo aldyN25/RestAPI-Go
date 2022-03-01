@@ -63,8 +63,8 @@ func Edit(response http.ResponseWriter, request *http.Request) {
 func Update(response http.ResponseWriter, request *http.Request) {
 	request.ParseForm()
 	var product entitas.Product
-	query := request.URL.Query()
-	fmt.Println("id update", query.Get("id"))
+	// query := request.URL.Query()
+	// fmt.Println("id update", query.Get("id"))
 	fmt.Println("id update", request.Form.Get("id"))
 
 	product.Id, _ = strconv.ParseInt(request.Form.Get("id"), 10, 64)
